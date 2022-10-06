@@ -13,10 +13,10 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "instructor")
-public class InstructorEntity extends PersonEntity{
+@Table(name = "applicationUser")
+public class ApplicationUser extends PersonEntity{
 
-    @OneToMany(mappedBy = "instructor")
+    @OneToMany(mappedBy = "applicationUser")
     private Set<CourseAssignmentEntity> courseAssignmentSet;
 
 }

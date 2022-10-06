@@ -20,7 +20,7 @@ public class CourseAssignmentEntity extends BaseEntity{
     @ManyToOne
     private StudentEntity student;
     @ManyToOne
-    private InstructorEntity instructor;
+    private ApplicationUser applicationUser;
     @ManyToOne
     private CourseEntity course;
 }
