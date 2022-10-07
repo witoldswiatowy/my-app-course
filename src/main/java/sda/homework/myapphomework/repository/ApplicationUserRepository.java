@@ -6,4 +6,5 @@ import sda.homework.myapphomework.model.ApplicationUser;
 
 @Repository
 public interface ApplicationUserRepository extends JpaRepository<ApplicationUser, Long> {
+
 }

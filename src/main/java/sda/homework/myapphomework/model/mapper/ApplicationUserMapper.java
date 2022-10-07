@@ -2,6 +2,7 @@ package sda.homework.myapphomework.model.mapper;
 
 import sda.homework.myapphomework.model.ApplicationUser;
 import sda.homework.myapphomework.model.dto.ApplicationUserDto;
+import sda.homework.myapphomework.model.dto.CreateUserRequest;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -47,5 +48,17 @@ public class ApplicationUserMapper {
         return applicationUsers.stream()
                 .map(ApplicationUserMapper::toApplicationUserDto)
                 .collect(Collectors.toList());
+    }
+
+    public static ApplicationUser createRequestToApplicationUser (CreateUserRequest request){
+        if (request == null){
+            return null;
+        }
+        ApplicationUser applicationUser = new ApplicationUser();
+        applicationUser.setFirstName(request.getName());
+        applicationUser.setLastName(request.getSurname());
+        applicationUser.setPhoneNumber(request.getPhoneNumber());
+        applicationUser.setEmail(request.getEmail());
+        return applicationUser;
     }
 }

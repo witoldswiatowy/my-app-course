@@ -24,6 +24,8 @@ public class ApplicationUserDto {
     private String phoneNumber;
     private String email;
 
+    private String username;
+
     private Set<CourseAssignmentDto> courseAssignmentDtoSet;
 
 

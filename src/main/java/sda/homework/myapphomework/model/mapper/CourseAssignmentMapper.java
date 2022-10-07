@@ -4,10 +4,7 @@ import sda.homework.myapphomework.model.ApplicationUser;
 import sda.homework.myapphomework.model.CourseAssignmentEntity;
 import sda.homework.myapphomework.model.CourseEntity;
 import sda.homework.myapphomework.model.StudentEntity;
-import sda.homework.myapphomework.model.dto.ApplicationUserDto;
-import sda.homework.myapphomework.model.dto.CourseAssignmentDto;
-import sda.homework.myapphomework.model.dto.CourseDto;
-import sda.homework.myapphomework.model.dto.StudentDto;
+import sda.homework.myapphomework.model.dto.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -65,5 +62,17 @@ public class CourseAssignmentMapper {
         return courseAssignments.stream()
                 .map(CourseAssignmentMapper::toCourseAssignmentDto)
                 .collect(Collectors.toList());
+    }
+
+    public static CourseAssignmentEntity createRequestToCourseAssignmentEntity (CourseAssignmentRequest courseAssignmentRequest){
+        if (courseAssignmentRequest == null){
+            return null;
+        }
+
+        CourseAssignmentEntity courseAssignment = new CourseAssignmentEntity();
+        courseAssignment.setActiveAssignment(courseAssignmentRequest.isActiveAssignment());
+        courseAssignment.setAssignmentToCourse(courseAssignmentRequest.getAssignmentToCourse());
+        courseAssignment.setFinishCourse(courseAssignmentRequest.getFinishCourse());
+        return courseAssignment;
     }
 }
