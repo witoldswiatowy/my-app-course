@@ -1,4 +1,4 @@
-package model.dto;
+package sda.homework.myapphomework.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

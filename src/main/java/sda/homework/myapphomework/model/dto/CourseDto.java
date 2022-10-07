@@ -1,10 +1,11 @@
-package model.dto;
+package sda.homework.myapphomework.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Set;
 
@@ -12,19 +13,17 @@ import java.util.Set;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ApplicationUserDto {
+public class CourseDto {
 
     private Long id;
     private LocalDateTime createDate;
     private LocalDateTime updateDate;
     private Long version;
 
-    private String firstName;
-    private String lastName;
-    private String phoneNumber;
-    private String email;
+    private String name;
+    private LocalDate startDate;
+    private LocalDate endDate;
 
     private Set<CourseAssignmentDto> courseAssignmentDtoSet;
-
 
 }

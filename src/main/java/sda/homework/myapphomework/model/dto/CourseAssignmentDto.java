@@ -1,12 +1,9 @@
-package model.dto;
+package sda.homework.myapphomework.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import model.ApplicationUser;
-import model.CourseEntity;
-import model.StudentEntity;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

@@ -1,7 +1,7 @@
-package model.mapper;
+package sda.homework.myapphomework.model.mapper;
 
-import model.ApplicationUser;
-import model.dto.ApplicationUserDto;
+import sda.homework.myapphomework.model.ApplicationUser;
+import sda.homework.myapphomework.model.dto.ApplicationUserDto;
 
 import java.util.List;
 import java.util.stream.Collectors;

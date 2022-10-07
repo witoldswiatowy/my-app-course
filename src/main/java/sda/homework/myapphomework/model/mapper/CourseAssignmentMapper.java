@@ -1,13 +1,13 @@
-package model.mapper;
+package sda.homework.myapphomework.model.mapper;
 
-import model.ApplicationUser;
-import model.CourseAssignmentEntity;
-import model.CourseEntity;
-import model.StudentEntity;
-import model.dto.ApplicationUserDto;
-import model.dto.CourseAssignmentDto;
-import model.dto.CourseDto;
-import model.dto.StudentDto;
+import sda.homework.myapphomework.model.ApplicationUser;
+import sda.homework.myapphomework.model.CourseAssignmentEntity;
+import sda.homework.myapphomework.model.CourseEntity;
+import sda.homework.myapphomework.model.StudentEntity;
+import sda.homework.myapphomework.model.dto.ApplicationUserDto;
+import sda.homework.myapphomework.model.dto.CourseAssignmentDto;
+import sda.homework.myapphomework.model.dto.CourseDto;
+import sda.homework.myapphomework.model.dto.StudentDto;
 
 import java.util.List;
 import java.util.stream.Collectors;

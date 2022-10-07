@@ -1,4 +1,4 @@
-package model;
+package sda.homework.myapphomework.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

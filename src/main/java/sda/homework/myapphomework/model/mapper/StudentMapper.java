@@ -1,7 +1,7 @@
-package model.mapper;
+package sda.homework.myapphomework.model.mapper;
 
-import model.StudentEntity;
-import model.dto.StudentDto;
+import sda.homework.myapphomework.model.StudentEntity;
+import sda.homework.myapphomework.model.dto.StudentDto;
 
 import java.util.List;
 import java.util.stream.Collectors;
