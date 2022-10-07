@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import sda.homework.myapphomework.exception.ParamsIsEmptyException;
 import sda.homework.myapphomework.model.StudentEntity;
+import sda.homework.myapphomework.model.dto.CreateStudentRequest;
 import sda.homework.myapphomework.model.dto.StudentDto;
 import sda.homework.myapphomework.model.mapper.StudentMapper;
 import sda.homework.myapphomework.repository.StudentRepository;
@@ -32,6 +33,17 @@ public class StudentServiceImpl implements StudentService {
         log.info("Create student {}", savedStudentEntity);
         return StudentMapper.toStudentDto(savedStudentEntity);
     }
+
+    @Override
+    public StudentDto createStudent(CreateStudentRequest request) {
+        validateCorrectRequestForCrud(request);
+        StudentEntity studentEntity = StudentMapper.createRequestToStudentEntity(request);
+        StudentEntity savedStudentEntity = studentRepository.save(studentEntity);
+        log.info("Create student {}", savedStudentEntity);
+        return StudentMapper.toStudentDto(savedStudentEntity);
+    }
+
+
 
     /**
      * {@inheritDoc}
@@ -71,6 +83,20 @@ public class StudentServiceImpl implements StudentService {
             log.error("Can not create student without last name!");
             throw new ParamsIsEmptyException("Can not create student without last name!");
         }
+    }
 
+    private void validateCorrectRequestForCrud(CreateStudentRequest request) {
+        if (request == null) {
+            log.error("Object what you want to save is null!");
+            throw new IllegalArgumentException();
+        }
+        if (request.getFirstName() == null || request.getFirstName().isBlank()){
+            log.error("Can not create student without first name!");
+            throw new ParamsIsEmptyException("Can not create student without first name!");
+        }
+        if (request.getLastName() == null || request.getLastName().isBlank()){
+            log.error("Can not create student without last name!");
+            throw new ParamsIsEmptyException("Can not create student without last name!");
+        }
     }
 }

@@ -1,5 +1,6 @@
 package sda.homework.myapphomework.service;
 
+import sda.homework.myapphomework.model.dto.CreateStudentRequest;
 import sda.homework.myapphomework.model.dto.StudentDto;
 
 import javax.persistence.EntityNotFoundException;
@@ -14,6 +15,7 @@ public interface StudentService {
      * @return created {@link StudentDto}
      */
     StudentDto createStudent(StudentDto studentDto);
+    StudentDto createStudent(CreateStudentRequest request);
 
     /**
      * Update the passed student.
